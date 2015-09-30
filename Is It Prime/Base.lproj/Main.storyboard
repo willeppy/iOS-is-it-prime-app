@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Is_It_Prime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Numbers.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="uHH-TO-BUC">
+                                <rect key="frame" x="0.0" y="46" width="600" height="207"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="66Y-p4-Eoh"/>
+                                    <constraint firstAttribute="width" constant="600" id="p0S-Nj-I9F"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is It Prime?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvo-ee-5hu">
+                                <rect key="frame" x="133" y="126" width="335" height="47"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="iwN-jZ-GdW"/>
+                                    <constraint firstAttribute="width" constant="335" id="xkg-cM-fmR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="45"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="7" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3g-dR-fXy">
+                                <rect key="frame" x="133" y="396" width="335" height="184"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="Yhb-U2-zRo"/>
+                                    <constraint firstAttribute="width" constant="335" id="l3a-ln-UQp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your number in the box to discover if it's prime" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olh-ku-Rrx">
+                                <rect key="frame" x="169" y="261" width="262" height="47"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="7tb-EB-a8U"/>
+                                    <constraint firstAttribute="height" constant="47" id="xha-DC-rXS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number Here" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QU1-pB-Rsd">
+                                <rect key="frame" x="226" y="343" width="148" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="7M0-nL-r1k"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="aI4-p0-rvZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="aru-y0-F7r"/>
+                                    <constraint firstAttribute="height" constant="30" id="kRn-eO-cam"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgI-eQ-ke9">
+                                <rect key="frame" x="392" y="343" width="49" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFZ-vy-8WD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XgI-eQ-ke9" firstAttribute="baseline" secondItem="QU1-pB-Rsd" secondAttribute="baseline" id="2UA-qt-3BW"/>
+                            <constraint firstItem="uHH-TO-BUC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="FGf-D5-NuA"/>
+                            <constraint firstItem="QU1-pB-Rsd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HBz-8m-X3q"/>
+                            <constraint firstItem="n3g-dR-fXy" firstAttribute="top" secondItem="XgI-eQ-ke9" secondAttribute="bottom" constant="23" id="JE7-cP-V4e"/>
+                            <constraint firstItem="n3g-dR-fXy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K1I-8I-wIc"/>
+                            <constraint firstItem="Wvo-ee-5hu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="UlC-Ti-d7F"/>
+                            <constraint firstItem="Wvo-ee-5hu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eUh-91-dHb"/>
+                            <constraint firstItem="uHH-TO-BUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gU3-4k-dKR"/>
+                            <constraint firstItem="olh-ku-Rrx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jA2-qA-x91"/>
+                            <constraint firstItem="QU1-pB-Rsd" firstAttribute="top" secondItem="olh-ku-Rrx" secondAttribute="bottom" constant="35" id="n3w-WL-oCa"/>
+                            <constraint firstItem="XgI-eQ-ke9" firstAttribute="leading" secondItem="QU1-pB-Rsd" secondAttribute="trailing" constant="18" id="tUv-hq-i9H"/>
+                            <constraint firstItem="olh-ku-Rrx" firstAttribute="top" secondItem="uHH-TO-BUC" secondAttribute="bottom" constant="8" id="vlD-eJ-879"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="responseLabel" destination="n3g-dR-fXy" id="7Wa-Ag-52k"/>
+                        <outlet property="userNumber" destination="QU1-pB-Rsd" id="y7o-ZA-MlB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="439" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Numbers.jpeg" width="353" height="143"/>
+    </resources>
 </document>
